@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    height: 150px;
+    text-align: center;
+
+    
+}
+
+.title-container {
+    width: 400px;
+    max-height: 120px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 50px;
+
+}
+
+h1{ 
+    font-size: 37px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.project-title {
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input{
+    width: 300px;
+    background: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+
+
+aside {
+    width: 20%;
+    float: left;
+    word-wrap: break-word;
+    text-align: center;
+
+}
+
+aside .delete{
+    float: right;
+}
+aside form {
+    text-align: center;
+}
+
+ul {
+    max-width: 100%;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+
+
+li .delete:hover{
+    background: #aaa;
+}
+
+.project-editable {
+    cursor: text;
+}
+
+.project-selected {
+    background: rgb(236, 236, 236);
+}
+
+/* Delete button global */
+
+.delete {
+    font-weight: 400;
+    border: none;
+    background: transparent;
+    border-radius: 1px;
+    padding: 5px 10px;
+}
+
+.delete:hover,
+.delete:focus {
+    background: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+/* Task Section */
+#tasks {
+    display: flex;
+    float:left;
+    width: 80%;
+    padding-left: 15px;
+    margin-top: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.task{
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    position: relative;
+    width: 220px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    margin: 10px;
+    padding: 10px;
+    min-height: 100px;
+    line-height: 1.4;
+}
+
+.task:hover{
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
+}
+
+.task .delete {
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin: 15px 3px 0px 10px;
+}
+
+.date {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 15px 3px 3px 10px;
+}
+
+
+/* Modal */
+
+.task-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 33%;
+    word-wrap: break-word;
+    min-height: 150px;
+  }
+
+.modal-close {
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    color: #aaaaaa;
+    font-size: 36px;
+    font-weight: bold;
+}
+.modal-content .delete {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin: 15px 3px 3px 10px;
+  
+}
+.modal-description {
+    border-top: 1px solid rgb(216, 216, 216);
+    padding: 10px 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
