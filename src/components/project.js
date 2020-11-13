@@ -1,37 +1,37 @@
 class Project {
-    constructor(title, id) {
-        this._title = title;
-        this._id = id;
-        this._tasks = [];
-    }
+  constructor(title, id) {
+    this._title = title;
+    this._id = id;
+    this._tasks = [];
+  }
 
-    set title(name) {
-        this._title = name;
-    }
+  set title(name) {
+    this._title = name;
+  }
 
-    get title() {
-        return this._title;
-    }
-    
-    get id() {
-        return this._id;
-    }
+  get title() {
+    return this._title;
+  }
 
-    get tasks() {
-        return this._tasks;
-    }
+  get id() {
+    return this._id;
+  }
 
-    set tasks(tasks) {
-        this._tasks = tasks;
-    }
+  get tasks() {
+    return this._tasks;
+  }
 
-    toJSON() {
-        return {
-            title: this.title,
-            id: this.id,
-            tasks: this.tasks
-        }
-    }
+  set tasks(tasks) {
+    this._tasks = tasks;
+  }
+
+  toJSON() {
+    return {
+      title: this.title,
+      id: this.id,
+      tasks: this.tasks,
+    };
+  }
 }
 
 export default Project;

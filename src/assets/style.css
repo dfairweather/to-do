@@ -19,6 +19,10 @@ header {
     
 }
 
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
 .title-container {
     width: 400px;
     max-height: 120px;
@@ -29,11 +33,17 @@ header {
 }
 
 h1{ 
-    font-size: 37px;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 500;
 }
 
 h3 {
     font-size: 24px;
+    font-weight: 400;
 }
 
 .project-title {
@@ -43,13 +53,16 @@ h3 {
 }
 
 input{
+    font-family: 'Lato', sans-serif;
+    color: #222;
+    font-weight: 500;
     width: 300px;
     background: white;
-    text-decoration: none;
     font-size: 20px;
     margin: 10px;
     border: none;
     border-bottom: 1px solid rgb(170, 170, 170);
+    outline: 0px solid transparent;
 }
 
 
@@ -77,6 +90,7 @@ ul {
 }
 
 li {
+    border-radius: 2px;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -95,11 +109,13 @@ li .delete:hover{
 
 .project-selected {
     background: rgb(236, 236, 236);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Delete button global */
 
 .delete {
+    color: #333;
     font-weight: 400;
     border: none;
     background: transparent;
@@ -125,7 +141,6 @@ li .delete:hover{
 }
 
 .task{
-    
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     position: relative;
@@ -137,6 +152,11 @@ li .delete:hover{
     min-height: 100px;
     line-height: 1.4;
 }
+
+.task-description {
+    padding-bottom: 20px;
+}
+
 
 .task:hover{
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
@@ -151,6 +171,8 @@ li .delete:hover{
 }
 
 .date {
+    color: #555;
+    font-size: 14px;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -204,7 +226,7 @@ li .delete:hover{
 }
 .modal-description {
     border-top: 1px solid rgb(216, 216, 216);
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
 }
 
 .modal-close:hover,
